@@ -30,7 +30,7 @@ public class TexttestFixture {
                 System.out.println(item.name+", "+item.sellIn+", "+item.quality);
             }
             System.out.println();
-            GildedRose.gildedRose.updateQuality();
+            GildedRose.updateQuality();
         }
     }
 }

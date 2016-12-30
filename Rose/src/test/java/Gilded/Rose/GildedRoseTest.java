@@ -11,7 +11,7 @@ public class GildedRoseTest {
     public void doTestBody(String name, int day, int qual, int expDay, int expQual) {
         GildedRose.items = new ArrayList<Item>();
         GildedRose.items.add(new Item(name, day, qual));
-        GildedRose.gildedRose.updateQuality();
+        GildedRose.updateQuality();
         assertEquals(expDay, GildedRose.items.get(0).getSellIn());	
 		assertEquals(expQual, GildedRose.items.get(0).getQuality());
 		System.out.println(name + " - sellIn expected " + expDay + ", actual " + GildedRose.items.get(0).getSellIn()+ " ||| quality expected " + expQual + ", actual " + GildedRose.items.get(0).getQuality());
@@ -59,7 +59,7 @@ public class GildedRoseTest {
 		GildedRose.items.add(new Item("Backstage passes to a TAFKAL80ETC concert", 10, 49));
 		GildedRose.items.add(new Item("Backstage passes to a TAFKAL80ETC concert", 5, 49));
 		
-		GildedRose.gildedRose.updateQuality();
+		GildedRose.updateQuality();
 		
 		assertEquals(9, GildedRose.items.get(0).getSellIn());	
 		assertEquals(1, GildedRose.items.get(1).getSellIn());
