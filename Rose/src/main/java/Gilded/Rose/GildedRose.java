@@ -19,6 +19,9 @@ class GildedRose {
     		case "Backstage passes to a TAFKAL80ETC concert":
     			gildedRose = new GildedRoseBackstage();
     			break;
+    		case "Conjured Mana Cake":
+    			gildedRose = new GildedRoseConjured();
+    			break;
 
 			default:
 				gildedRose = new GildedRose();

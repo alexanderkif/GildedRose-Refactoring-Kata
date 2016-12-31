@@ -10,22 +10,22 @@ public class GildedRoseBackstage extends GildedRose {
 		}
 		else
 		{
-			if (item.getQuality() < 50){
-			    item.setQuality(item.getQuality() + 1);
-			}
+			increaseLess50(item);
 			
 			if (item.getSellIn() < 11){
-				if (item.getQuality() < 50){
-				    item.setQuality(item.getQuality() + 1);
-				}
+	            increaseLess50(item);
 	        }
 	        if (item.getSellIn() < 6){
-	        	if (item.getQuality() < 50){
-	    		    item.setQuality(item.getQuality() + 1);
-	    		}
+	            increaseLess50(item);
 	        }
 		}
         
 		item.setSellIn(item.getSellIn() - 1);
     }
+
+	private void increaseLess50(Item item) {
+		if (item.getQuality() < 50){
+		    item.setQuality(item.getQuality() + 1);
+		}
+	}
 }

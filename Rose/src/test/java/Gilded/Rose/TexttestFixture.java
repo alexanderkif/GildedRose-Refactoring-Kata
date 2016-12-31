@@ -15,9 +15,8 @@ public class TexttestFixture {
         GildedRose.items.add(new Item("Backstage passes to a TAFKAL80ETC concert", 15, 20));
         GildedRose.items.add(new Item("Backstage passes to a TAFKAL80ETC concert", 10, 49));
         GildedRose.items.add(new Item("Backstage passes to a TAFKAL80ETC concert", 5, 49));
-                // this conjured item does not work properly yet
-                //new Item("Conjured Mana Cake", 3, 6) 
- 
+        GildedRose.items.add(new Item("Conjured Mana Cake", 3, 6));
+        
         int days = 2;
         if (args.length > 0) {
             days = Integer.parseInt(args[0]) + 1;
