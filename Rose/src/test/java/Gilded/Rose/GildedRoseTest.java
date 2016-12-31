@@ -48,6 +48,11 @@ public class GildedRoseTest {
 	}
 	
 	@Test
+    public void testConjured(){
+		doTestBody("Conjured Mana Cake", -1, 6, -2, 2);
+	}
+	
+	@Test
 	public void testItems() {
 		GildedRose.items = new ArrayList<Item>();		
 		GildedRose.items.add(new Item("+5 Dexterity Vest", 10, 20));
@@ -58,6 +63,7 @@ public class GildedRoseTest {
 		GildedRose.items.add(new Item("Backstage passes to a TAFKAL80ETC concert", 15, 20));
 		GildedRose.items.add(new Item("Backstage passes to a TAFKAL80ETC concert", 10, 49));
 		GildedRose.items.add(new Item("Backstage passes to a TAFKAL80ETC concert", 5, 49));
+		GildedRose.items.add(new Item("Conjured Mana Cake", 3, 6));
 		
 		GildedRose.updateQuality();
 		
@@ -69,6 +75,7 @@ public class GildedRoseTest {
 		assertEquals(14, GildedRose.items.get(5).getSellIn());
 		assertEquals(9, GildedRose.items.get(6).getSellIn());
 		assertEquals(4, GildedRose.items.get(7).getSellIn());
+		assertEquals(2, GildedRose.items.get(8).getSellIn());
 		
 		assertEquals(19, GildedRose.items.get(0).getQuality());	
 		assertEquals(1, GildedRose.items.get(1).getQuality());	
@@ -77,7 +84,8 @@ public class GildedRoseTest {
 		assertEquals(80, GildedRose.items.get(4).getQuality());
 		assertEquals(21, GildedRose.items.get(5).getQuality());	
 		assertEquals(50, GildedRose.items.get(6).getQuality());	
-		assertEquals(50, GildedRose.items.get(7).getQuality());	
+		assertEquals(50, GildedRose.items.get(7).getQuality());
+		assertEquals(4, GildedRose.items.get(8).getQuality());
 		
 		System.out.println("Complex test");
 	}
